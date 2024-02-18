@@ -20,6 +20,7 @@
 \usepackage{url}
 
 \DeclareSIUnit\angstrom{\text {Å}}
+\pagenumbering{roman}
 
 \title{IB CHEMISTRY HL IA
 \\
@@ -49,9 +50,11 @@ Clay Soil Swelling}
 \tableofcontents
 \newpage
 
+\pagenumbering{arabic}
 % \begin{multicols*}{2}
 
 \section{Introduction}
+\setcounter{page}{1}
 % TODO
 
 \section{Purpose}
@@ -80,18 +83,6 @@ then the amount of clay swelling is reduced \cite{ramavaraprasadSwellingCharacte
 
 
 \section{Proof of Concept}
-% \noindent
-% \begin{minipage}{0.6\textwidth}
-% \end{minipage}
-% \hspace{10pt}
-% \begin{minipage}{0.35\textwidth}
-%     \begin{figure}[H]
-%         \centering
-%         \includegraphics[width=\linewidth]{poc1MHCL.jpg}
-%         \caption{Proof of Concept Trial of \SI{1.0}{mL} \SI{1.0}{mol.dm^{-3}} \ce{HCl} with \SI{1.0}{mL} bentonite clay}
-%         \label{fig:poc1MHCL}
-%     \end{figure}
-% \end{minipage}
 
 \begin{wrapfigure}{r}{0.3\textwidth}
     \begin{center}
@@ -180,7 +171,7 @@ the factor by which the volume of
 sodium bentonite swells and the concentration of \ce{H+} ions of the mixed
 solution will be indirectly proportional in linear fashion
 given that a linear increase in \ce{[H+]} means a linear increase
-of \ce{H+} ions that become available to replace \ce{Na+} ions.
+of the amount of \ce{H+} ions that become available to replace \ce{Na+} ions.
 
 However, it is predicted that there will be a point where
 a decrease in swelling will begin to slow down when a deficiency
@@ -205,7 +196,14 @@ The responding variable will be measured using a \SI{25}{mL} graduated cylinder.
 For each trial, set a timer for a set amount of time and record
 the final volume when the timer ends.
 \subsubsection{Why it must be controlled}
-% TODO
+Inconsistent durations of time between trials will entail
+that the clays that were allows more time to swell will be able
+to swell more than it should relative to the other trials.
+Note that in the process, there will be a slight difference in duration
+allowed between the 5 trials that share the same \ce{[H+]}.
+This is not significant as due to the slow nature of clay swelling,
+a difference in duration by under a minute will not lead to
+major inconsistencies.
 
 \subsection{Controlled Variable 2: Volume of initial clay}
 \subsubsection{How to control it}
@@ -217,36 +215,58 @@ by taking the volume of the dry bentonite with a graduated cylinder
 and transferring it to a weigh boat to determine what mass of clay
 is associative with the set volume of clay.
 \subsubsection{Why it must be controlled}
-% TODO
+Differing the volume of initial clay between trials will lead to
+major differences in sodium ions present in the clay. This will
+lead to inconsistencies of the swelling factor as there will
+be more/less sodium ions ready to be exchanged with
+hydrogen ions.
 
+\subsection{Controlled Variable 3: Volume of solution mixed with clay}
+\subsubsection{How to control it}
+Measure the same volume of solution for each trial.
+\subsubsection{Why it must be controlled}
+Differing the volume of solution mixed with the clay between different
+trials will lead to major difference of the amount \ce{H+} ions available to
+be exchanged with \ce{Na+} ions in the clay. Because this ion
+exchange is essential to the behaviour of swelling in bentonite clay,
+the volume of the solution mixed with the clay must be controlled.
 
 \section{Equipment and Materials}
 
-\begin{itemize}
-    \item Lab Apron
-    \item Lab Goggles
-    \item Waste Beakers
-    \item Distilled Water
-    \item Sodium Bentonite Clay
-    \item \SI{1.0}{mol.L^{-1}} hydrochloric acid (HCl)
-    \item \SI{0.1}{mol.L^{-1}} hydrochloric acid (HCl)
-    \item (1) \SI{10}{mL} Graduated Cylinder
-    \item (5) \SI{25}{mL} Graduated Cylinders
-    \item (3) \SI{100}{mL} Volumetric Flasks
-    \item \SI{10}{mL} pipette
-    \item (5) Weigh Boats
-    \item Pipette pump
-    \item Scoopula
-    \item Stir rod
-    \item Digital Balance
-    \item Timer
-\end{itemize}
+\begin{multicols}{2}
+
+    \begin{itemize}
+        \item Lab Apron
+        \item Lab Goggles
+        \item Waste Beakers
+        \item Distilled Water
+        \item Sodium Bentonite Clay
+        \item \SI{1.0}{mol.dm^{-3}} hydrochloric acid (HCl)
+        \item \SI{0.1}{mol.dm^{-3}} hydrochloric acid (HCl)
+        \item (1) \SI{10}{mL} Graduated Cylinder
+        \item (5) \SI{25}{mL} Graduated Cylinders
+        \item (3) \SI{100}{mL} Volumetric Flasks
+        \item \SI{10}{mL} pipette
+        \item (5) Weigh Boats
+        \item Pipette pump
+        \item Scoopula
+        \item (2) Stir rod
+        \item Paper towel
+        \item Digital Balance
+        \item Timer
+    \end{itemize}
+
+\end{multicols}
 
 \section{Safety, Environmental, and Ethical Considerations}
 
 \begin{itemize}
+    \item Always remember to wear your lab apron and eye protection before proceeding with the experiment
+    \item Read the Safety Data Sheet of hydrochloric acid before beginning the experiment
+    \item Thoroughly wash any skin that has been in contact with hydrochloric acid
     \item When performing acid dilution, always add the acid into the water and not the other way around.
-    \item Dispose of any waste containing acid to a waste beaker
+    \item Dispose of any waste containing acid to a waste beaker, labelling the beaker with contents and approximate \ce{[H+]}
+    \item Take caution when attaching/detaching a pipette pump onto/from a pipette, ensuring that the distance between your two hands do not apply overwhelming torque onto the pipette
 \end{itemize}
 
 \section{Procedure}
@@ -258,12 +278,25 @@ is associative with the set volume of clay.
     \item Repeat Steps \ref*{step:pip} and \ref*{step:mix} using \SI{0.1}{mol^{-3}} \ce{HCl} to obtain a \SI{100}{mL} solution of \SI{0.05}{mol.dm^{-3}} \ce{HCl}
     \item Using the \SI{10}{mL} pipette, transfer \SI{10}{mL} of distilled water to the \SI{100}{mL} volumetric flask
     \item Top up the \SI{100}{mL} volumetric flask with \SI{1.0}{mol.dm^{-3}} \ce{HCl} to obtain a \SI{100}{mL} solution of \SI{0.01}{mol.dm^{-3}} \ce{HCl}
-    \item Using a scoopula, transfer bentonite clay into the \SI{10}{mL} graduated cylinder until there is \SI{1}{mL} of bentonite clay.
-    \item Place a weigh boat onto the digital balance and tare the balance.
-    \item Transfer all the bentonite clay in the \SI{10}{mL} graduated cylinder into the weight boat and
+    \item Using a scoopula, transfer bentonite clay into the \SI{10}{mL} graduated cylinder until there is \SI{1}{mL} of bentonite clay
+    \item Place a weigh boat onto the digital balance and tare the balance
+    \item Transfer all the bentonite clay in the \SI{10}{mL} graduated cylinder into the weight boat and record the mass of the bentonite clay \label{step:findClayMass}
+    \item \label{step:measureMass} Place another weight boat on the digital balance, tare the balance, then transfer enough bentonite clay using the scoopula such that the mass read by the balance matches the mass found in Step \ref*{step:findClayMass}.
+    \item Repeat Step \ref*{step:measureMass} for all 5 weigh boats.
+    \item Using the \SI{10}{mL} pipette, transfer \SI{10}{mL} of a solution to each \SI{25}{mL} graduated cylinder
+    \item Flick the bottom of each weight boat such that all the clay reaches to one corner, then proceed to transfer the clay of each weigh boat to each \SI{25}{mL} graduated cylinder as quickly as possible
+    \item Set a timer for 10 minutes
+    \item As the timer approaches its end, start flicking each graduated cylinder to force all the bentonite clay to be submerged at the bottom of the graduated cylinder
+    \item Once the timer ends, record the final volumes of bentonite clay in each \SI{25}{mL} graduated cylinder
+    \item If the solution is acidic, first transfer remaining solution into the waste beaker, using an acid designated stir rod to remove the majority of the clay. Fill up the graduated cylinder with water, then transfer the water and any large chunks of clay into the waste beaker again
+    \item \label{step:clean} Repeatedly fill the graduated cylinder with water and scrub the interior with a stir rod wrapped by paper towel until no clay remains
+    \item Repeat Steps \ref*{step:measureMass} to \ref*{step:clean} for all solutions
+    \item Wash your hands thoroughly after the experiment and clean the laboratory workspace
 \end{enumerate}
 
 \section{Evidence}
+\subsection{Qualitative Observations}
+\subsection{Quantitative Data}
 
 \section{Processed Data}
 
