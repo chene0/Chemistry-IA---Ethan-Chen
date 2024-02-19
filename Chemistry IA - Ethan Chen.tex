@@ -2,6 +2,7 @@
 \usepackage[margin=0.5in]{geometry}
 \setlength{\columnsep}{0.25in}
 \usepackage{multicol}
+\usepackage{paracol}
 \usepackage[english]{babel}
 \usepackage{graphicx}
 \graphicspath{{Figures/}{./}}
@@ -14,10 +15,14 @@
 \usepackage{siunitx}
 \usepackage{mhchem}
 \usepackage[justification=centering]{caption}
+\usepackage{subfigure}
 \usepackage{float}
+\usepackage{outlines}
 \usepackage{tabularray}
 \usepackage{apacite}
 \usepackage{url}
+
+% TODO: ensure that everything (other than personal stuff) is third person
 
 \DeclareSIUnit\angstrom{\text {Å}}
 \pagenumbering{roman}
@@ -61,7 +66,7 @@ Clay Soil Swelling}
 
 The purpose of this investigation is to determine the relationship between
 the factor by which the volume of
-sodium bentonite increases and the concentration of \ce{H+} of an acidic solution when an acidic solution and sodium bentonite
+sodium bentonite swells and the concentration of \ce{H+} of an acidic solution /\unit{mol.dm^{-3}} when the acidic solution and sodium bentonite
 mixes.
 
 \section{Background Information}
@@ -234,25 +239,25 @@ the volume of the solution mixed with the clay must be controlled.
 \section{Equipment and Materials}
 
 \begin{multicols}{2}
-
+    % TODO: mention beakers for clay and water
     \begin{itemize}
         \item Lab Apron
         \item Lab Goggles
         \item Waste Beakers
         \item Distilled Water
         \item Sodium Bentonite Clay
-        \item \SI{1.0}{mol.dm^{-3}} hydrochloric acid (HCl)
-        \item \SI{0.1}{mol.dm^{-3}} hydrochloric acid (HCl)
-        \item (1) \SI{10}{mL} Graduated Cylinder
-        \item (5) \SI{25}{mL} Graduated Cylinders
-        \item (3) \SI{100}{mL} Volumetric Flasks
-        \item \SI{10}{mL} pipette
+        \item \SI{1.00}{mol.dm^{-3}} hydrochloric acid (HCl) \\ (\(\pm\) \SI{0.03}{mol.dm^{-3}})
+        \item \SI{0.100}{mol.dm^{-3}} hydrochloric acid (HCl) \\ (\(\pm\) \SI{0.006}{mol.dm^{-3}})
+        \item (1) \SI{10.00}{mL} Graduated Cylinder (\(\pm\) \SI{0.02}{mL})
+        \item (5) \SI{25.0}{mL} Graduated Cylinders (\(\pm\) \SI{0.3}{mL})
+        \item (3) \SI{100.0}{mL} Volumetric Flasks (\(\pm\) \SI{0.2}{mL})
+        \item \SI{10.00}{mL} pipette (\(\pm\) \SI{0.04}{mL})
         \item (5) Weigh Boats
         \item Pipette pump
         \item Scoopula
         \item (2) Stir rod
         \item Paper towel
-        \item Digital Balance
+        \item Digital Balance (\(\pm\) \SI{0.003}{g})
         \item Timer
     \end{itemize}
 
@@ -262,6 +267,7 @@ the volume of the solution mixed with the clay must be controlled.
 
 \begin{itemize}
     \item Always remember to wear your lab apron and eye protection before proceeding with the experiment
+    \item No consumption of food or water during the experiment
     \item Read the Safety Data Sheet of hydrochloric acid before beginning the experiment
     \item Thoroughly wash any skin that has been in contact with hydrochloric acid
     \item When performing acid dilution, always add the acid into the water and not the other way around.
@@ -271,6 +277,7 @@ the volume of the solution mixed with the clay must be controlled.
 
 \section{Procedure}
 
+% TODO: mention beakers of clay and water
 \begin{enumerate}
     \item Put on lab apron and eye protection
     \item Using the \SI{10}{mL} pipette, transfer \SI{50}{mL} of distilled water to the \SI{100}{mL} volumetric flask \label{step:pip}
@@ -294,17 +301,531 @@ the volume of the solution mixed with the clay must be controlled.
     \item Wash your hands thoroughly after the experiment and clean the laboratory workspace
 \end{enumerate}
 
+% TODO: annotate figure
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{labSetup.jpg}
+    \caption{Lab setup prior to mixing between bentonite clay and the solution}
+    \label{fig:labSetup}
+\end{figure}
+
+% TODO: additional mini figures
+% \begin{minipage}{0.3\textwidth}
+% \end{minipage}
+% \hfill
+% \begin{minipage}{0.3\textwidth}
+% \end{minipage}
+% \hfill
+% \begin{minipage}{0.3\textwidth}
+% \end{minipage}
+
 \section{Evidence}
 \subsection{Qualitative Observations}
+\begin{outline}
+    \1 The sodium bentonite clay is a grey powder that appears in various sizes (fine to the size of a grain of sand). Fine parts of the clay easily stick to glassware and the weigh boats
+    \1 The hydrochloric acid is a clear colourless solution for all \ce{[H+]} concentrations used in this experiment
+    \1 None of the trials lead to a hole in the submerged clay that was observed in the proof of concept mixture between water and bentonite clay
+    \1 When the clay is mixed with water
+    \2 The submerged clay releases black solids resembling sesame seeds
+    \2 The solution immediately changes into a murky white
+    \2 The submerged clay turns into a dark grey in the form of fluffy particles signficantly larger than the dry grains of clay
+    \1 When the clay is mixed with \SI{0.01}{mol.dm^{-3}} \ce{HCl}
+    \2 The clay turns into a dark grey, but not as dark as in the trials with water
+    \2 Initially, solution mixed with the clay remains clear and colourless. However, the solution turns white and murky upon agitation
+    \1 When the clay is mixed with \SI{0.05}{mol.dm^{-3}} \ce{HCl} or \SI{0.1}{mol.dm^{-3}} \ce{HCl}
+    \2 THe solution overtime turns from clear and colourless to white and murky
+    \2 Submerged clay is white than that of the \SI{0.01}{mol.dm^{-3}} trials
+    \1 When the clay is mixed with \SI{0.5}{mol.dm^{-3}} \ce{HCl} or \SI{1.0}{mol.dm^{-3}} \ce{HCl}
+    \2 The solution immediately turns white and murky
+    \2 There is bubbling at the meniscus of the solution
+    \2 All the submerged clay is fine and does not stick to the glassware
+\end{outline}
+
 \subsection{Quantitative Data}
 
-\section{Processed Data}
+\begin{itemize}
+    \item The initial volume of the bentonite clay was \(\SI{1.00}{mL} \pm \SI{0.02}{mL}\). This initial volume was standardized to be \(\SI{0.810}{g} \pm \SI{0.003}{g}\).
+\end{itemize}
+
+\begin{table}[H]
+    \centering
+    \caption{Raw data of final volume of bentonite clay for 5 trials of each hydrochloric acid concentration}
+    \begin{tblr}{
+        cells = {c},
+        cell{1}{1} = {r=2}{},
+        cell{1}{2} = {c=5}{},
+        vlines,
+        hline{1,3-9} = {-}{},
+                hline{2} = {2-6}{},
+            }
+        Concentration of \ce{HCl} in the solution /$\unit{mol.dm^{-3}}$ & Final Volume of submerged bentonite clay /$\unit{mL} \pm \SI{0.3}{mL}$ &         &         &         &         \\
+                                                                        & Trial 1                                                                & Trial 2 & Trial 3 & Trial 4 & Trial 5 \\
+        0 (Distilled Water)                                             & 8.5                                                                    & 8.5     & 7.5     & 9.0     & 8.0     \\
+        $0.0100 \pm 0.0007$                                             & 8.0                                                                    & 8.5     & 9.0     & 9.5     & 7.5     \\
+        $0.050 \pm 0.003$                                               & 5.5                                                                    & 5.5     & 5.5     & 6.0     & 5.0     \\
+        $0.100 \pm 0.006$                                               & 5.0                                                                    & 5.0     & 5.0     & 5.0     & 5.0     \\
+        $0.50 \pm 0.02$                                                 & 4.0                                                                    & 4.5     & 4.0     & 4.5     & 4.0     \\
+        $1.00 \pm 0.03$                                                 & 3.0                                                                    & 3.0     & 2.8     & 2.8     & 2.0
+    \end{tblr}
+\end{table}
+
+\subsection{Uncertainty Propagation}
+
+The \SI{1.00}{mol.dm^{-3}} \ce{HCl} and \SI{0.100}{mol.dm^{-3}} \ce{HCl}
+solutions were prepared by a lab technician using the following
+materials.
+
+\begin{itemize}
+    \item \SI{12.0}{mol.dm^{-3}} \ce{HCl} (\(\pm 3\%\) according to \cite{HydrochloricAcidConcentrate})
+    \item \SI{1000.0}{mL} Volumetric Flask (\(\pm \SI{0.6}{mL}\)) for acid dilution
+    \item \SI{100.0}{mL} Graduated Cylinder (\(\pm \SI{0.3}{mL}\)) for measuring volume of distilled water
+\end{itemize}
+
+The uncertainty for \SI{1.00}{mol.dm^{-3}} \ce{HCl} and \SI{0.100}{mol.dm^{-3}}
+can then be calculated. A sample calculation for \SI{1.00}{mol.dm^{-3}} \ce{HCl}
+is shown below.
+
+\begingroup
+\allowdisplaybreaks
+\begin{align*}
+     & C_2 = \SI{1.00}{mol.dm^{-3}},\quad C_1 = \SI{12.0}{M} \pm 3\%,\quad V_2 = \SI{1000.0}{mL} \pm \SI{0.6}{mL}
+    \\
+     & V_1 = \frac{C_2V_2}{C_1}
+    \\
+     & V_1 = \frac{\SI{1.00}{mol.dm^{-3}} \cdot \SI{1000.0}{mL}}{\SI{12.0}{mol.dm^{-3}}}
+    \\
+     & = \SI{83.3}{mL}
+    \\
+     & \text{From the uncertainty for the \SI{100.0}{mL} graduated cylinder}
+    \\
+     & V_1 = \SI{83.3}{mL} \pm \SI{0.3}{mL}
+    \\
+     & \Delta C_2 = C_2 \left( \frac{\Delta C_1}{C_1} + \frac{\Delta V_2}{V_2} + \frac{\Delta V_1}{V_1} \right)
+    \\
+     & = \SI{1.00}{mol.dm^{-3}} \left( 3\% + \frac{\SI{0.6}{mL}}{\SI{1000.0}{mL}} + \frac{\SI{0.3}{mL}}{\SI{83.3}{mL}} \right)
+    \\
+     & = \SI{0.03}{mol.dm^{-3}}
+    \\
+     & C_2 = \SI{1.00}{mol.dm^{-3}} \pm \SI{0.03}{mol.dm^{-3}}
+\end{align*}
+\endgroup
+
+The uncertainties for the rest of the diluted solutions are then determined
+in a similar fashion given the following considerations:
+
+\begin{itemize}
+    \item The \SI{0.50}{mol.dm^{-3}} \ce{HCl} solution was diluted from the \(\SI{1.00}{mol.dm^{-3}} \pm \SI{0.03}{mol.dm^{-3}}\) \ce{HCl} solution
+    \item The \SI{0.050}{mol.dm^{-3}} \ce{HCl} solution and \SI{0.0100}{mol.dm^{-3}} \ce{HCl} solution were diluted from the \(\SI{0.100}{mol.dm^{-3}} \pm \SI{0.006}{mol.dm^{-3}}\) \ce{HCl} solution
+    \item 3 \(\SI{100.0}{mL} \pm \SI{0.2}{mL}\) volumetric flasks were used for acid dilution
+    \item A \(\SI{10.00}{mL} \pm \SI{0.04}{mL}\) pipette was used to measure volume of distilled water
+\end{itemize}
 
 \section{Analysis}
 
-\section{Evaluation}
+To find the factor of swelling, we must take the final volume of submerged
+bentonite clay and divide that by the initial volume of bentonite clay.
+Because the initial volume of bentonite clay was \SI{1.00}{mL}, then
+the factor of swelling for each of the 5 trials would be the same.
+However, due to the presence of uncertainty in both the \SI{25}{mL}
+graduated cylinder used for the final volume of submerged bentonite clay
+and the \SI{10}{mL} graduated cylinder used to measure the initial
+\(\SI{1.00}{mL} \pm \SI{0.02}{mL}\) of bentonite clay.
+A sample calculation of this is shown below using the first trial
+of the mixture between distilled water and bentonite clay.
 
-% \end{multicols*}
+\begin{align*}
+    \text{Let } & F = \text{Factor of swelling of the bentonite clay}
+    \\
+                & V_f = \text{The final volume of bentonite clay } /\unit{mL}
+    \\
+                & V_i = \text{The initial volume of bentonite clay } /\unit{mL}
+    \\
+    \\
+                & F = 8.5,\quad V_f = \SI{8.5}{mL} \pm \SI{0.3}{mL},\quad V_i = \SI{1.00}{mL} \pm \SI{0.02}{mL}
+    \\
+    \\
+                & F = \frac{V_f}{V_i}
+    \\
+                & \therefore \Delta F = F\left( \frac{\Delta V_f}{V_f} + \frac{\Delta V_i}{V_i} \right)
+    \\
+                & = (8.5)\left( \frac{\SI{0.3}{mL}}{\SI{8.5}{mL}} + \frac{\SI{0.02}{mL}}{\SI{1.00}{mL}} \right)
+    \\
+                & = 0.5
+    \\
+                & F = 8.5 \pm 0.5
+\end{align*}
+
+The next step is to determine the upper and lower bounds of each trial's factor of swelling
+using this calculated uncertainty as exemplified below using
+the first trial of the mixture between distilled water and
+bentonite clay.
+
+\begin{align*}
+     & F_{upper} = F + \Delta F = 8.5 + 0.5 = 9.0
+    \\
+     & F_{lower} = F - \Delta F = 8.5 - 0.5 = 8.0
+\end{align*}
+
+Now, the overall value of the factor of swelling can be determined
+using the average between the maximum and minimum values selected
+from the upper and lower bounds of each trial's factor of swelling
+along with half the difference between the same values.
+This calculation is shown below using the trials for the mixture
+between bentonite clay and distilled water.
+
+\begin{align*}
+     & F_{max} = 9.5,\quad F_{min} = 7.1
+    \\
+     & \overline{F} = \frac{F_{max} + F_{min}}{2}
+    \\
+     & = \frac{9.5 + 7.1}{2}
+    \\
+     & = 8
+    \\
+     & \Delta F = \frac{F_{max} - F_{min}}{2}
+    \\
+     & = \frac{9.5 - 7.1}{2}
+    \\
+     & = 1
+    \\
+     & F = \overline{F} \pm \Delta F
+    \\
+     & F = 8 \pm 1
+\end{align*}
+
+Tables \ref*{tab:unc} to \ref*{tab:finalizedFactor} present all the processed data for all trials.
+
+\begin{table}[H]
+    \centering
+    \caption{The uncertainty of the factor of swelling per trial for each concentration used in the experiment}
+    \label{tab:unc}
+    \begin{tblr}{
+        cells = {c},
+        cell{1}{1} = {r=2}{},
+        cell{1}{2} = {c=5}{},
+        vlines,
+        hline{1,3-9} = {-}{},
+                hline{2} = {2-6}{},
+            }
+        Concentration of HCl in the solution /$\unit{mol.dm^{-3}}$ & Uncertainty of the factor of swelling per trial &         &         &         &         \\
+                                                                   & Trial 1                                         & Trial 2 & Trial 3 & Trial 4 & Trial 5 \\
+        0 (Distilled Water)                                        & 0.5                                             & 0.5     & 0.5     & 0.5     & 0.5     \\
+        $0.0100 \pm 0.0007$                                        & 0.5                                             & 0.5     & 0.5     & 0.5     & 0.5     \\
+        $0.050 \pm 0.003$                                          & 0.4                                             & 0.4     & 0.4     & 0.4     & 0.4     \\
+        $0.100 \pm 0.006$                                          & 0.4                                             & 0.4     & 0.4     & 0.4     & 0.4     \\
+        $0.50 \pm 0.02$                                            & 0.4                                             & 0.4     & 0.4     & 0.4     & 0.4     \\
+        $1.00 \pm 0.03$                                            & 0.4                                             & 0.4     & 0.4     & 0.4     & 0.3
+    \end{tblr}
+\end{table}
+
+\begin{table}[H]
+    \centering
+    \caption{The upper bound of the factor of swelling per trial for each concentration used in the experiment}
+    \begin{tblr}{
+        cells = {c},
+        cell{1}{1} = {r=2}{},
+        cell{1}{2} = {c=5}{},
+        vlines,
+        hline{1,3-9} = {-}{},
+                hline{2} = {2-6}{},
+            }
+        Concentration of HCl in the solution /$\unit{mol.dm^{-3}}$ & Upper bound of the factor of swelling per trial &         &         &         &         \\
+                                                                   & Trial 1                                         & Trial 2 & Trial 3 & Trial 4 & Trial 5 \\
+        0 (Distilled Water)                                        & 9.0                                             & 9.0     & 8.0     & 9.5     & 8.5     \\
+        $0.0100 \pm 0.0007$                                        & 8.5                                             & 9.0     & 9.5     & 10.0    & 8.0     \\
+        $0.050 \pm 0.003$                                          & 5.9                                             & 5.9     & 5.9     & 6.4     & 5.4     \\
+        $0.100 \pm 0.006$                                          & 5.4                                             & 5.4     & 5.4     & 5.4     & 5.4     \\
+        $0.50 \pm 0.02$                                            & 4.4                                             & 4.9     & 4.4     & 4.9     & 4.4     \\
+        $1.00 \pm 0.03$                                            & 3.4                                             & 3.4     & 3.2     & 3.2     & 2.3
+    \end{tblr}
+\end{table}
+
+\begin{table}[H]
+    \centering
+    \caption{The lower bound of the factor of swelling per trial for each concentration used in the experiment}
+    \begin{tblr}{
+        cells = {c},
+        cell{1}{1} = {r=2}{},
+        cell{1}{2} = {c=5}{},
+        vlines,
+        hline{1,3-9} = {-}{},
+                hline{2} = {2-6}{},
+            }
+        Concentration of HCl in the solution /$\unit{mol.dm^{-3}}$ & Lower bound of the factor of swelling per trial &         &         &         &         \\
+                                                                   & Trial 1                                         & Trial 2 & Trial 3 & Trial 4 & Trial 5 \\
+        0 (Distilled Water)                                        & 8.0                                             & 8.0     & 7.1     & 8.5     & 7.5     \\
+        $0.0100 \pm 0.0007$                                        & 7.5                                             & 8.0     & 8.5     & 9.0     & 7.1     \\
+        $0.050 \pm 0.003$                                          & 5.1                                             & 5.1     & 5.1     & 5.6     & 4.6     \\
+        $0.100 \pm 0.006$                                          & 4.6                                             & 4.6     & 4.6     & 4.6     & 4.6     \\
+        $0.50 \pm 0.02$                                            & 3.6                                             & 4.1     & 3.6     & 4.1     & 3.6     \\
+        $1.00 \pm 0.03$                                            & 2.6                                             & 2.6     & 2.4     & 2.4     & 1.7
+    \end{tblr}
+\end{table}
+
+\begin{table}[H]
+    \centering
+    \caption{The overall factor of swelling for each concentration of HCl}
+    \label{tab:finalizedFactor}
+    \begin{tblr}{
+            cells = {c},
+            hlines,
+            vlines,
+        }
+        Concentration of HCl in the solution /$\unit{mol.dm^{-3}}$ & Factor of swelling \\
+        0 (Distilled Water)                                        & $8 \pm 1$          \\
+        $0.0100 \pm 0.0007$                                        & $9 \pm 1$          \\
+        $0.050 \pm 0.003$                                          & $5.5 \pm 0.9$      \\
+        $0.100 \pm 0.006$                                          & $5.0 \pm 0.4$      \\
+        $0.50 \pm 0.02$                                            & $4.3 \pm 0.6$      \\
+        $1.00 \pm 0.03$                                            & $2.5 \pm 0.9$
+    \end{tblr}
+\end{table}
+
+Plotting this processed data as Factor of swelling of bentonite clay as a function
+of \ce{[HCl]} results in the graph in Figure \ref*{fig:procDataRaw}.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{procDataRaw.png}
+    \caption{Factor of swelling of bentonite clay as a function of \ce{[HCl]}}
+    \label{fig:procDataRaw}
+\end{figure}
+
+
+Recall that the original hypothesis stated that the relationship between
+the responding and manipulated variable is inversely proportional,
+which is evident in the graphed data. However, the parts of the hypothesis
+that aren't so evident in the experimental data is that
+the relationship would initially be linear and then approach
+a horizontal asymptote.
+
+Given that the slope change is very immediate at around when \(\ce{[HCl]} = \SI{0.050}{mol.dm^{-3}}\)
+as well as the maintenance of a lower slope for a signficantly wider domain
+between \(\ce{[HCl]} = \SI{0.100}{mol.dm^{-3}}\) to \(\ce{[HCl]} = \SI{1.00}{mol.dm^{-3}}\),
+the original section of the hypothesis regarding an initial linear relationship
+transitioning to an asymptote has been proved to be false.
+
+However, the possibility of the presence of a horizontal asymptote is not
+removed. In hindsight of seeing the experimental relationship from the concentrations
+of \ce{HCl} used in this experiment in that the final 3 data points maintain
+a relatively steady curve that sit above a factor of swelling of 2,
+it could be argued that since the minimum logical factor of swelling is 1, then the effects of an asymptote could have been observed had
+the domain of concentrations of \ce{HCl} been significantly extended.
+
+At a glance, the overall trend of the graph may either appear to be logarithmic,
+exponential, or of a reciprocal function. However, a logarithmic relationship
+does not have a horizontal asymptote, meaning that such a relationship would
+not apply to this experiment as the swelling factor must approach a plateau
+as \ce{Na+} ions are depleted.
+
+Figures \ref*{fig:exponential} and \ref*{fig:reciprocal} present the
+exponential and reciprocal best-fit trendline respectively.
+Visually speaking, the reciprocal trendline has a signficantly
+better fit than the exponential trendline.
+
+\begin{multicols}{2}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=\linewidth]{exponential.png}
+        \caption{Factor of swelling of bentonite clay as a function of \ce{[HCl]} with a logarithmic trendline}
+        \label{fig:exponential}
+    \end{figure}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=\linewidth]{reciprocal.png}
+        \caption{Factor of swelling of bentonite clay as a function of \ce{[HCl]} with a reciprocal trendline}
+        \label{fig:reciprocal}
+    \end{figure}
+\end{multicols}
+
+% TODO: r^2 verification
+Numerical confirmation that the reciprocal trendline has a better fit can be performed
+by performing two separate linearizations where one assumes
+an exponential trend and the other assumes a reciprocal function
+trend. Then, the coefficient of determination can be determined
+and compared for both linearized graphs.
+
+Similarly to Integrated Rate Laws, graphing the natural logarithm of the factor of swelling as a function
+of \ce{[H+]} will linearize an exponential relationship, while
+graphing the reciprocal of the factor of swelling as a function
+of \ce{[H+]} will linearize a reciprocal relationship.
+A sample calculation is shown below using the factor of swelling from distilled water, with the results
+of these calculations performed for all trials presented
+in Table  and the resulting graphs presented in Figures and .
+
+\begin{multicols}{2}
+    \begin{align*}
+         & F = 8 \pm 1
+        \\
+         & F_{exponential} = \ln{F}
+        \\
+         & = \ln{8}
+        \\
+         & = 2.1
+        \\
+         & \Delta F_{exponential} = \frac{\Delta F}{F}
+        \\
+         & = \frac{1}{8}
+        \\
+         & = 0.1
+        \\
+         & F_{exponential} = 2.1 \pm 0.1
+    \end{align*}
+
+    \begin{align*}
+         & F = 8 \pm 1
+        \\
+         & F_{reciprocal} = F^{-1}
+        \\
+         & = 8^{-1}
+        \\
+         & = 0.12
+        \\
+         & \Delta F_{reciprocal} = F_{reciprocal} \times \frac{\Delta F}{F}
+        \\
+         & = 0.12 \times \frac{1}{8}
+        \\
+         & = 0.02
+        \\
+         & F_{reciprocal} = 0.12 \pm 0.02
+    \end{align*}
+\end{multicols}
+
+\begin{table}[H]
+    \centering
+    \caption{Natural logarithm and reciprocal of factor of swelling for each concentration of HCl}
+    \begin{tabular}{|c|c|c|}
+        \hline
+        Concentration of HCl in solution /$\unit{mol.dm^{-3}}$ & \begin{tabular}[c]{@{}c@{}}Natural logarithm of\\factor of swelling\end{tabular} & \begin{tabular}[c]{@{}c@{}}Reciprocal of\\factor of swelling\end{tabular} \\
+        \hline
+        0 (Distilled Water)                                    & \(2.1 \pm 0.1\)                                                                  & \(0.12 \pm 0.02\)                                                         \\
+        \hline
+        $0.0100 \pm 0.0007$                                    & \(2.1 \pm 0.2\)                                                                  & \(0.12 \pm 0.02\)                                                         \\
+        \hline
+        $0.050 \pm 0.003$                                      & \(1.7 \pm 0.2\)                                                                  & \(0.18 \pm 0.03\)                                                         \\
+        \hline
+        $0.100 \pm 0.006$                                      & \(1.6 \pm 0.1\)                                                                  & \(0.20 \pm 0.02\)                                                         \\
+        \hline
+        $0.50 \pm 0.02$                                        & \(1.4 \pm 0.1\)                                                                  & \(0.24 \pm 0.04\)                                                         \\
+        \hline
+        $1.00 \pm 0.03$                                        & \(0.9 \pm 0.3\)                                                                  & \(0.4 \pm 0.1\)                                                           \\
+        \hline
+    \end{tabular}
+\end{table}
+
+\begin{multicols}{2}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=\linewidth]{lnLinearization.png}
+        \caption{Natural logarithm of factor of swelling of\\bentonite clay as a function of \ce{[HCl]} as a linearization under an exponential trend of the original relationship}
+        \label{fig:lnLinearization}
+    \end{figure}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=\linewidth]{reciprocalLinearization.png}
+        \caption{Reciprocal of factor of swelling of\\bentonite clay as a function of \ce{[HCl]} as a linearization under a reciprocal trend of the original relationship}
+        \label{fig:reciprocalLinearization}
+    \end{figure}
+\end{multicols}
+% TODO: r^2 calculation
+
+Calculations for the coefficients of determination for
+the Natural logarithm of factor of swelling of bentonite clay
+as a function of \ce{[HCl]} and the Reciprocal of factor of swelling
+of bentonite clay as a function of \ce{[HCl]} is shown below.
+
+\begingroup
+\allowdisplaybreaks
+\begin{paracol}{2}
+    \begin{align*}
+         & \text{With reference to Figure } \ref*{fig:lnLinearization}
+        \\
+         & RSS = \sum_{n} (m\ce{[HCl]}_n + F_0 - F_n)^2
+        \\
+         & RSS = (\SI{-1.0428}{dm^3.mol^{-1}}\times0 + 1.945 - 2.1)^2 +
+        \\
+         & (\SI{-1.0428}{dm^3.mol^{-1}}\times\SI{0.0100}{mol.dm^{-3}} + 1.945 - 2.1)^2
+        \\
+         & + \cdots +
+        \\
+         & (\SI{-1.0428}{dm^3.mol^{-1}}\times\SI{1.00}{mol.dm^{-3}} + 1.945 - 0.9)^2
+        \\
+         & = 0.16
+        \\
+         & \overline{F} = \frac{\sum F}{n}
+        \\
+         & \frac{2.1 + 2.1 + \cdots + 0.9}{6}
+        \\
+         & = 1.6
+        \\
+         & TSS = \sum_{n} (F_n - \overline{F})^2
+        \\
+         & = (2.1 - 1.6)^2 + (2.1 - 1.6)^2 + \cdots + (0.9 - 1.6)^2
+        \\
+         & 1.0
+        \\
+         & R^2 = 1 - \frac{RSS}{TSS}
+        \\
+         & = 1 - \frac{0.16}{1.0}
+        \\
+         & = 0.84
+    \end{align*}
+    \switchcolumn
+    \begin{align*}
+         & \text{With reference to Figure } \ref*{fig:reciprocalLinearization}
+        \\
+         & RSS = \sum_{n} (m\ce{[HCl]}_n + F_0 - F_n)^2
+        \\
+         & RSS = (\SI{0.2482}{dm^3.mol^{-1}}\times0 + 0.1402 - 0.12)^2 +
+        \\
+         & (\SI{0.2482}{dm^3.mol^{-1}}\times\SI{0.0100}{mol.dm^{-3}} + 0.1402 - 0.12)^2
+        \\
+         & + \cdots +
+        \\
+         & (\SI{0.2482}{dm^3.mol^{-1}}\times\SI{1.00}{mol.dm^{-3}} + 0.1402 - 0.4)^2
+        \\
+         & = 0.0040
+        \\
+         & \overline{F} = \frac{\sum F}{n}
+        \\
+         & \frac{0.12 + 0.12 + \cdots + 0.4}{6}
+        \\
+         & = 0.21
+        \\
+         & TSS = \sum_{n} (F_n - \overline{F})^2
+        \\
+         & = (0.12 - 0.21)^2 + (0.12 - 0.21)^2 + \cdots + (0.4 - 0.21)^2
+        \\
+         & 0.054
+        \\
+         & R^2 = 1 - \frac{RSS}{TSS}
+        \\
+         & = 1 - \frac{0.0040}{0.054}
+        \\
+         & = 0.92
+    \end{align*}
+\end{paracol}
+\endgroup
+
+\section{Conclusion}
+
+\subsection{Summary}
+
+From this investigation, it was determined that the relationship
+between the factor by which the sodium bentonite clay swells
+and the concentration of \ce{H+} ions of an acidic solution \unit{mol.dm^{-3}}
+when the acidic solution and bentonite mix is of a reciprocal function.
+
+% TODO: discuss success
+
+\subsection{Evaluation}
+
+% TODO: sources of error
+% 1: High ratio of solution to clay
+
+\subsection{Suggested improvements}
+
+% 1: Decrease ratio of solution to clay, implement in process a section where you determine whats a good ratio that doesn't completely absorb the solution
 
 \bibliographystyle{apacite}
 \bibliography{IB_CHEM_IA.bib}
