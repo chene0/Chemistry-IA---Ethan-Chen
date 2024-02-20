@@ -651,7 +651,7 @@ graphing the reciprocal of the factor of swelling as a function
 of \ce{[H+]} will linearize a reciprocal relationship.
 A sample calculation is shown below using the factor of swelling from distilled water, with the results
 of these calculations performed for all trials presented
-in Table  and the resulting graphs presented in Figures and .
+in Table \ref*{tab:linearized} and the resulting graphs presented in Figures \ref*{fig:lnLinearization} and \ref*{fig:reciprocalLinearization}.
 
 \begin{multicols}{2}
     \begin{align*}
@@ -694,6 +694,7 @@ in Table  and the resulting graphs presented in Figures and .
 \begin{table}[H]
     \centering
     \caption{Natural logarithm and reciprocal of factor of swelling for each concentration of HCl}
+    \label{tab:linearized}
     \begin{tabular}{|c|c|c|}
         \hline
         Concentration of HCl in solution /$\unit{mol.dm^{-3}}$ & \begin{tabular}[c]{@{}c@{}}Natural logarithm of\\factor of swelling\end{tabular} & \begin{tabular}[c]{@{}c@{}}Reciprocal of\\factor of swelling\end{tabular} \\
@@ -814,14 +815,32 @@ of bentonite clay as a function of \ce{[HCl]} is shown below.
 From this investigation, it was determined that the relationship
 between the factor by which the sodium bentonite clay swells
 and the concentration of \ce{H+} ions of an acidic solution \unit{mol.dm^{-3}}
-when the acidic solution and bentonite mix is of a reciprocal function.
+when the acidic solution and bentonite mix is inversely proportional, specifically
+of a reciprocal relationship (\(F \propto \frac{1}{\ce{[HCl]}}\)).
 
-% TODO: discuss success
+The coefficient of determination for the reciprocal linearization
+(0.92) is a strong numerical support for the argument that
+there is a reciprocal relationship between the Factor
+of swelling and \ce{[HCl]}. However, one may look at
+Figure \ref*{fig:reciprocalLinearization}
+with skepticism regarding whether the trend is truly linear.
+While error bars give support to the argument that the
+trendline is linear, the way in which the data points from
+\(\ce{[HCl]} = \SI{0.050}{mol.dm^{-3}}, \SI{0.100}{mol.dm^{-3}}\)
+sit above the trendline and the data point from
+\(\ce{[HCl]} = \SI{0.50}{mol.dm^{-3}}\) sits below the trendline
+suggests the possibility of the relationship between
+\(\frac{1}{F}\) and \ce{[HCl]} to be cubic or inversely sigmoidal.
+This remaining uncertainty ultimately must be solved through
+more data distributed in between \(\ce{[HCl]} = 0\) to \(\ce{[HCl]} = 1\).
+
+% TODO: compare to literature values
 
 \subsection{Evaluation}
 
 % TODO: sources of error
 % 1: High ratio of solution to clay
+
 
 \subsection{Suggested improvements}
 
