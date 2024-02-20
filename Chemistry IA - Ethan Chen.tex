@@ -1,5 +1,5 @@
 \documentclass[11pt, letterpaper]{article}
-\usepackage[margin=0.5in]{geometry}
+\usepackage[margin=0.45in]{geometry}
 \setlength{\columnsep}{0.25in}
 \usepackage{multicol}
 \usepackage{paracol}
@@ -26,6 +26,7 @@
 
 \DeclareSIUnit\angstrom{\text {Å}}
 \pagenumbering{roman}
+\globalcounter{figure}
 
 \title{IB CHEMISTRY HL IA
 \\
@@ -59,15 +60,26 @@ Clay Soil Swelling}
 % \begin{multicols*}{2}
 
 \section{Introduction}
+
 \setcounter{page}{1}
-% TODO
 
-\section{Purpose}
-
-The purpose of this investigation is to determine the relationship between
+From the engineers in my family, I have always been exposed to ideas
+surrounding the various unguessable factors that can
+bring a structure to its knees. One factor that I had been
+introduced to was the different degrees that clay soils will swell under different acidic conditions,
+in which structures that are built upon clay soils must
+be engineered to be able to withstand the expansion of the soil
+when the soil is contaminated from "natural processes" such
+as rain \cite{ramavaraprasadSwellingCharacteristicsSoils2018a}.
+While clay soil under an engineering context involves
+predicting and designing a structure according to the
+type of clay soil and the common levels of acidity
+to come into contact with the clay, I was brought to the
+research question of "What is the relationship between
 the factor by which the volume of
 sodium bentonite swells and the concentration of \ce{H+} of an acidic solution /\unit{mol.dm^{-3}} when the acidic solution and sodium bentonite
-mixes.
+mixes?"
+
 
 \section{Background Information}
 
@@ -88,14 +100,6 @@ then the amount of clay swelling is reduced \cite{ramavaraprasadSwellingCharacte
 
 
 \section{Proof of Concept}
-
-\begin{wrapfigure}{r}{0.3\textwidth}
-    \begin{center}
-        \includegraphics[width=0.28\textwidth]{poc1MHCL.jpg}
-    \end{center}
-    \caption{Proof of Concept Trial of \SI{1.0}{mL} \SI{1.0}{mol.dm^{-3}} \ce{HCl} with \SI{1.0}{mL} bentonite clay}
-    \label{fig:poc1MHCL}
-\end{wrapfigure}
 
 Before the experiment was performed, a proof of concept
 was done to determine whether there is a difference
@@ -118,14 +122,6 @@ in cleaning out the mixture especially in a \SI{10}{mL} graduated
 cylinder. On the packaging of the bentonite clay, it recommends
 that the clay and solution should be mixed at a 1:10 ratio.
 
-\begin{wrapfigure}{l}{0.28\textwidth}
-    \begin{center}
-        \includegraphics[width=0.28\textwidth]{betterPOC.jpg}
-    \end{center}
-    \caption{Proof of Concept Trial of \SI{10}{mL} \SI{1.0}{mol.dm^{-3}} \ce{HCl} (left) and \SI{10}{mL} of water (right) with \SI{1.0}{mL} bentonite clay}
-    \label{fig:betterPOC}
-\end{wrapfigure}
-
 Two additional test trials were done with \SI{10}{mL} of
 \SI{1.0}{mol.dm^{-3}} \ce{HCl} and \SI{10}{mL} of water,
 each mixed into \SI{1.0}{mL} of bentonite clay in
@@ -146,14 +142,6 @@ In this proof of concept, the method of mixing the solution
 into the clay was continued to ensure that there is consistency
 between the test trials.
 
-\begin{wrapfigure}{R}{0.2\textwidth}
-    \begin{center}
-        \includegraphics[width=0.18\textwidth]{hole.jpg}
-    \end{center}
-    \caption{Hole in bentonite clay in test trial between \SI{10}{mL} of water with \SI{1.0}{mL} bentonite}
-    \label{fig:hole}
-\end{wrapfigure}
-
 One interesting qualitative observation at this point was that
 in the mixture of bentonite clay with water, there was a hole
 in the immersed bentonite clay, as seen in Figure \ref*{fig:hole}.
@@ -168,6 +156,39 @@ in this mixture (2.8 times) doesn't differ much compared to the
 mixture with \SI{10}{mL} of \SI{1.0}{mol.dm^{-3}} \ce{HCl}, therefore
 it was decided that \SI{1.0}{mol.dm^{-3}} will be the maximum
 concentration for this investigation.
+
+
+
+
+
+
+\begin{paracol}{3}
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.28\textwidth]{poc1MHCL.jpg}
+        \caption{Proof of Concept Trial of \SI{1.0}{mL} \SI{1.0}{mol.dm^{-3}} \ce{HCl} with \SI{1.0}{mL} bentonite clay}
+        \label{fig:poc1MHCL}
+    \end{figure}
+    \switchcolumn
+
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.28\textwidth]{betterPOC.jpg}
+        \caption{Proof of Concept Trial of \SI{10}{mL} \SI{1.0}{mol.dm^{-3}} \ce{HCl} (left) and \SI{10}{mL} of water (right) with \SI{1.0}{mL} bentonite clay}
+        \label{fig:betterPOC}
+    \end{figure}
+
+    \switchcolumn
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.18\textwidth]{hole.jpg}
+        \caption{Hole in bentonite clay in test trial between \SI{10}{mL} of water with \SI{1.0}{mL} bentonite}
+        \label{fig:hole}
+    \end{figure}
+
+\end{paracol}
 
 \section{Hypothesis}
 
@@ -187,30 +208,46 @@ of swelling as a function of \ce{[H+]}.
 
 \section{Variables}
 
-\subsection{Manipulated Variable}
-The manipulated variable is the pH of the solution mixed with the
-bentonite clay. In this lab, the manipulated variable will be
-changed by acid dilution.
+\begin{paracol}{2}
+    \subsection{Manipulated Variable}
+    The manipulated variable is the pH of the solution mixed with the
+    bentonite clay. In this lab, the manipulated variable will be
+    changed by acid dilution.
+    \switchcolumn
+    \subsection{Responding Variable}
+    The responding variable is the factor by which the clay has swollen by.
+    The responding variable will be measured using a \SI{25}{mL} graduated cylinder.
 
-\subsection{Responding Variable}
-The responding variable is the factor by which the clay has swollen by.
-The responding variable will be measured using a \SI{25}{mL} graduated cylinder.
+\end{paracol}
 
-\subsection{Controlled Variable 1: Clay swelling duration}
-\subsubsection{How to control it}
-For each trial, set a timer for a set amount of time and record
-the final volume when the timer ends.
-\subsubsection{Why it must be controlled}
-Inconsistent durations of time between trials will entail
-that the clays that were allows more time to swell will be able
-to swell more than it should relative to the other trials.
-Note that in the process, there will be a slight difference in duration
-allowed between the 5 trials that share the same \ce{[H+]}.
-This is not significant as due to the slow nature of clay swelling,
-a difference in duration by under a minute will not lead to
-major inconsistencies.
 
-\subsection{Controlled Variable 2: Volume of initial clay}
+\begin{paracol}{2}
+    \subsection{Controlled Variable 1: Clay swelling duration}
+    \subsubsection{How to control it}
+    For each trial, set a timer for a set amount of time and record
+    the final volume when the timer ends.
+    \subsubsection{Why it must be controlled}
+    Inconsistent durations of time between trials will entail
+    that the clays that were allows more time to swell will be able
+    to swell more than it should relative to the other trials.
+    Note that in the process, there will be a slight difference in duration
+    allowed between the 5 trials that share the same \ce{[H+]}.
+    This is not significant as due to the slow nature of clay swelling,
+    a difference in duration by under a minute will not lead to
+    \switchcolumn
+    \subsection{Controlled Variable 2: Volume of solution mixed with clay}
+    \subsubsection{How to control it}
+    Measure the same volume of solution for each trial.
+    \subsubsection{Why it must be controlled}
+    Differing the volume of solution mixed with the clay between different
+    trials will lead to major difference of the amount \ce{H+} ions available to
+    be exchanged with \ce{Na+} ions in the clay. Because this ion
+    exchange is essential to the behaviour of swelling in bentonite clay,
+    the volume of the solution mixed with the clay must be controlled.
+    major inconsistencies.
+\end{paracol}
+
+\subsection{Controlled Variable 3: Volume of initial clay}
 \subsubsection{How to control it}
 Consistently use a set volume of bentonite clay for each trial. Note
 that because bentonite is rather sticky and therefore is tough
@@ -226,15 +263,7 @@ lead to inconsistencies of the swelling factor as there will
 be more/less sodium ions ready to be exchanged with
 hydrogen ions.
 
-\subsection{Controlled Variable 3: Volume of solution mixed with clay}
-\subsubsection{How to control it}
-Measure the same volume of solution for each trial.
-\subsubsection{Why it must be controlled}
-Differing the volume of solution mixed with the clay between different
-trials will lead to major difference of the amount \ce{H+} ions available to
-be exchanged with \ce{Na+} ions in the clay. Because this ion
-exchange is essential to the behaviour of swelling in bentonite clay,
-the volume of the solution mixed with the clay must be controlled.
+
 
 \section{Equipment and Materials}
 
@@ -265,15 +294,20 @@ the volume of the solution mixed with the clay must be controlled.
 
 \section{Safety, Environmental, and Ethical Considerations}
 
-\begin{itemize}
-    \item Always remember to wear your lab apron and eye protection before proceeding with the experiment
-    \item No consumption of food or water during the experiment
-    \item Read the Safety Data Sheet of hydrochloric acid before beginning the experiment
-    \item Thoroughly wash any skin that has been in contact with hydrochloric acid
-    \item When performing acid dilution, always add the acid into the water and not the other way around.
-    \item Dispose of any waste containing acid to a waste beaker, labelling the beaker with contents and approximate \ce{[H+]}
-    \item Take caution when attaching/detaching a pipette pump onto/from a pipette, ensuring that the distance between your two hands do not apply overwhelming torque onto the pipette
-\end{itemize}
+\begin{paracol}{2}
+    \begin{itemize}
+        \item Always remember to wear your lab apron and eye protection before proceeding with the experiment
+        \item No consumption of food or water during the experiment
+        \item Read the Safety Data Sheet of hydrochloric acid before beginning the experiment
+        \item Thoroughly wash any skin that has been in contact with hydrochloric acid
+    \end{itemize}
+    \switchcolumn
+    \begin{itemize}
+        \item When performing acid dilution, always add the acid into the water and not the other way around.
+        \item Dispose of any waste containing acid to a waste beaker, labelling the beaker with contents and approximate \ce{[H+]}
+        \item Take caution when attaching/detaching a pipette pump onto/from a pipette, ensuring that the distance between your two hands do not apply overwhelming torque onto the pipette
+    \end{itemize}
+\end{paracol}
 
 \section{Procedure}
 
@@ -339,6 +373,7 @@ the volume of the solution mixed with the clay must be controlled.
     \2 The solution immediately turns white and murky
     \2 There is bubbling at the meniscus of the solution
     \2 All the submerged clay is fine and does not stick to the glassware
+    \1 Especially for trials when \(\ce{[HCl]} = \SI{1.00}{mol.dm^{-3}}\), the final volume of the submerged bentonite clay sometimes was below the minimum graduation on the \SI{25}{mL} graduated cylinder and therefore was difficult to determine the volume for
 \end{outline}
 
 \subsection{Quantitative Data}
@@ -430,68 +465,83 @@ However, due to the presence of uncertainty in both the \SI{25}{mL}
 graduated cylinder used for the final volume of submerged bentonite clay
 and the \SI{10}{mL} graduated cylinder used to measure the initial
 \(\SI{1.00}{mL} \pm \SI{0.02}{mL}\) of bentonite clay.
-A sample calculation of this is shown below using the first trial
-of the mixture between distilled water and bentonite clay.
-
-\begin{align*}
-    \text{Let } & F = \text{Factor of swelling of the bentonite clay}
-    \\
-                & V_f = \text{The final volume of bentonite clay } /\unit{mL}
-    \\
-                & V_i = \text{The initial volume of bentonite clay } /\unit{mL}
-    \\
-    \\
-                & F = 8.5,\quad V_f = \SI{8.5}{mL} \pm \SI{0.3}{mL},\quad V_i = \SI{1.00}{mL} \pm \SI{0.02}{mL}
-    \\
-    \\
-                & F = \frac{V_f}{V_i}
-    \\
-                & \therefore \Delta F = F\left( \frac{\Delta V_f}{V_f} + \frac{\Delta V_i}{V_i} \right)
-    \\
-                & = (8.5)\left( \frac{\SI{0.3}{mL}}{\SI{8.5}{mL}} + \frac{\SI{0.02}{mL}}{\SI{1.00}{mL}} \right)
-    \\
-                & = 0.5
-    \\
-                & F = 8.5 \pm 0.5
-\end{align*}
 
 The next step is to determine the upper and lower bounds of each trial's factor of swelling
-using this calculated uncertainty as exemplified below using
-the first trial of the mixture between distilled water and
-bentonite clay.
-
-\begin{align*}
-     & F_{upper} = F + \Delta F = 8.5 + 0.5 = 9.0
-    \\
-     & F_{lower} = F - \Delta F = 8.5 - 0.5 = 8.0
-\end{align*}
+using this calculated uncertainty.
 
 Now, the overall value of the factor of swelling can be determined
 using the average between the maximum and minimum values selected
 from the upper and lower bounds of each trial's factor of swelling
 along with half the difference between the same values.
-This calculation is shown below using the trials for the mixture
-between bentonite clay and distilled water.
 
-\begin{align*}
-     & F_{max} = 9.5,\quad F_{min} = 7.1
-    \\
-     & \overline{F} = \frac{F_{max} + F_{min}}{2}
-    \\
-     & = \frac{9.5 + 7.1}{2}
-    \\
-     & = 8
-    \\
-     & \Delta F = \frac{F_{max} - F_{min}}{2}
-    \\
-     & = \frac{9.5 - 7.1}{2}
-    \\
-     & = 1
-    \\
-     & F = \overline{F} \pm \Delta F
-    \\
-     & F = 8 \pm 1
-\end{align*}
+Sample calculations for these are presented below
+using the first trial
+of the mixture between distilled water and bentonite clay.
+
+\begin{paracol}{2}
+
+
+
+    \begin{align*}
+        \text{Let } & F = \text{Factor of swelling of the bentonite clay}
+        \\
+                    & V_f = \text{The final volume of bentonite clay } /\unit{mL}
+        \\
+                    & V_i = \text{The initial volume of bentonite clay } /\unit{mL}
+        \\
+        \\
+                    & F = 8.5
+        \\
+                    & V_f = \SI{8.5}{mL} \pm \SI{0.3}{mL}
+        \\
+                    & V_i = \SI{1.00}{mL} \pm \SI{0.02}{mL}
+        \\
+        \\
+                    & F = \frac{V_f}{V_i}
+        \\
+                    & \therefore \Delta F = F\left( \frac{\Delta V_f}{V_f} + \frac{\Delta V_i}{V_i} \right)
+        \\
+                    & = (8.5)\left( \frac{\SI{0.3}{mL}}{\SI{8.5}{mL}} + \frac{\SI{0.02}{mL}}{\SI{1.00}{mL}} \right)
+        \\
+                    & = 0.5
+        \\
+                    & F = 8.5 \pm 0.5
+    \end{align*}
+
+    \switchcolumn
+
+
+
+    \begin{align*}
+         & F_{upper} = F + \Delta F = 8.5 + 0.5 = 9.0
+        \\
+         & F_{lower} = F - \Delta F = 8.5 - 0.5 = 8.0
+    \end{align*}
+
+
+
+    \begin{align*}
+         & F_{max} = 9.5,\quad F_{min} = 7.1
+        \\
+         & \overline{F} = \frac{F_{max} + F_{min}}{2}
+        \\
+         & = \frac{9.5 + 7.1}{2}
+        \\
+         & = 8
+        \\
+         & \Delta F = \frac{F_{max} - F_{min}}{2}
+        \\
+         & = \frac{9.5 - 7.1}{2}
+        \\
+         & = 1
+        \\
+         & F = \overline{F} \pm \Delta F
+        \\
+         & F = 8 \pm 1
+    \end{align*}
+
+\end{paracol}
+
 
 Tables \ref*{tab:unc} to \ref*{tab:finalizedFactor} present all the processed data for all trials.
 
@@ -621,192 +671,165 @@ as \ce{Na+} ions are depleted.
 Figures \ref*{fig:exponential} and \ref*{fig:reciprocal} present the
 exponential and reciprocal best-fit trendline respectively.
 Visually speaking, the reciprocal trendline has a signficantly
-better fit than the exponential trendline.
+better fit than the exponential trendline. This is numerically
+proven from the coefficients of determination (\(R^2\)) between the two
+relationships, where the \(R^2\) value of the exponential best-fit trendline
+is 0.7165 whereas the \(R^2\) value of the reciprocal best-fit trendline
+is 0.9512.
 
 \begin{multicols}{2}
     \begin{figure}[H]
         \centering
         \includegraphics[width=\linewidth]{exponential.png}
-        \caption{Factor of swelling of bentonite clay as a function of \ce{[HCl]} with a logarithmic trendline}
+        \caption{Factor of swelling of bentonite clay as a function of \ce{[HCl]} with an exponential trendline}
         \label{fig:exponential}
     \end{figure}
     \begin{figure}[H]
         \centering
-        \includegraphics[width=\linewidth]{reciprocal.png}
+        \includegraphics[width=0.9\linewidth]{reciprocal.png}
         \caption{Factor of swelling of bentonite clay as a function of \ce{[HCl]} with a reciprocal trendline}
         \label{fig:reciprocal}
     \end{figure}
 \end{multicols}
 
-% TODO: r^2 verification
-Numerical confirmation that the reciprocal trendline has a better fit can be performed
-by performing two separate linearizations where one assumes
-an exponential trend and the other assumes a reciprocal function
-trend. Then, the coefficient of determination can be determined
-and compared for both linearized graphs.
+\cite{ramavaraprasadSwellingCharacteristicsSoils2018a}
+does not provide upfront any graphs for comparison under
+the context of this investigation. However, there is enough
+information within this source to analyze and convert
+into something insightful under this investigation's context.
+The final values of the swelling percentage in Figure \ref*{fig:literature} can
+be taken to determine to graph swelling percentage as
+a function of \ce{[H_3O+]} according to these literature
+values.
 
-Similarly to Integrated Rate Laws, graphing the natural logarithm of the factor of swelling as a function
-of \ce{[H+]} will linearize an exponential relationship, while
-graphing the reciprocal of the factor of swelling as a function
-of \ce{[H+]} will linearize a reciprocal relationship.
-A sample calculation is shown below using the factor of swelling from distilled water, with the results
-of these calculations performed for all trials presented
-in Table \ref*{tab:linearized} and the resulting graphs presented in Figures \ref*{fig:lnLinearization} and \ref*{fig:reciprocalLinearization}.
+Note that concentrations in the literature data are measured in
+normality (\unit{N}). Molarity can be determined from the
+formula \(M = \frac{N}{n}\), where \(M\) is the molarity of the
+acid /\unit{mol.dm^{-3}}, \(N\) is the normality of the solution
+/\unit{N}, and \(n\) is the number of protons in the acid \cite{theorganicchemistrytutorHowCalculateNormality2017}.
 
-\begin{multicols}{2}
-    \begin{align*}
-         & F = 8 \pm 1
-        \\
-         & F_{exponential} = \ln{F}
-        \\
-         & = \ln{8}
-        \\
-         & = 2.1
-        \\
-         & \Delta F_{exponential} = \frac{\Delta F}{F}
-        \\
-         & = \frac{1}{8}
-        \\
-         & = 0.1
-        \\
-         & F_{exponential} = 2.1 \pm 0.1
-    \end{align*}
+Sample calculations for the conversions
+from normality to molarity are shown below.
 
-    \begin{align*}
-         & F = 8 \pm 1
-        \\
-         & F_{reciprocal} = F^{-1}
-        \\
-         & = 8^{-1}
-        \\
-         & = 0.12
-        \\
-         & \Delta F_{reciprocal} = F_{reciprocal} \times \frac{\Delta F}{F}
-        \\
-         & = 0.12 \times \frac{1}{8}
-        \\
-         & = 0.02
-        \\
-         & F_{reciprocal} = 0.12 \pm 0.02
-    \end{align*}
-\end{multicols}
-
-\begin{table}[H]
-    \centering
-    \caption{Natural logarithm and reciprocal of factor of swelling for each concentration of HCl}
-    \label{tab:linearized}
-    \begin{tabular}{|c|c|c|}
-        \hline
-        Concentration of HCl in solution /$\unit{mol.dm^{-3}}$ & \begin{tabular}[c]{@{}c@{}}Natural logarithm of\\factor of swelling\end{tabular} & \begin{tabular}[c]{@{}c@{}}Reciprocal of\\factor of swelling\end{tabular} \\
-        \hline
-        0 (Distilled Water)                                    & \(2.1 \pm 0.1\)                                                                  & \(0.12 \pm 0.02\)                                                         \\
-        \hline
-        $0.0100 \pm 0.0007$                                    & \(2.1 \pm 0.2\)                                                                  & \(0.12 \pm 0.02\)                                                         \\
-        \hline
-        $0.050 \pm 0.003$                                      & \(1.7 \pm 0.2\)                                                                  & \(0.18 \pm 0.03\)                                                         \\
-        \hline
-        $0.100 \pm 0.006$                                      & \(1.6 \pm 0.1\)                                                                  & \(0.20 \pm 0.02\)                                                         \\
-        \hline
-        $0.50 \pm 0.02$                                        & \(1.4 \pm 0.1\)                                                                  & \(0.24 \pm 0.04\)                                                         \\
-        \hline
-        $1.00 \pm 0.03$                                        & \(0.9 \pm 0.3\)                                                                  & \(0.4 \pm 0.1\)                                                           \\
-        \hline
-    \end{tabular}
-\end{table}
-
-\begin{multicols}{2}
-    \begin{figure}[H]
-        \centering
-        \includegraphics[width=\linewidth]{lnLinearization.png}
-        \caption{Natural logarithm of factor of swelling of\\bentonite clay as a function of \ce{[HCl]} as a linearization under an exponential trend of the original relationship}
-        \label{fig:lnLinearization}
-    \end{figure}
-    \begin{figure}[H]
-        \centering
-        \includegraphics[width=\linewidth]{reciprocalLinearization.png}
-        \caption{Reciprocal of factor of swelling of\\bentonite clay as a function of \ce{[HCl]} as a linearization under a reciprocal trend of the original relationship}
-        \label{fig:reciprocalLinearization}
-    \end{figure}
-\end{multicols}
-% TODO: r^2 calculation
-
-Calculations for the coefficients of determination for
-the Natural logarithm of factor of swelling of bentonite clay
-as a function of \ce{[HCl]} and the Reciprocal of factor of swelling
-of bentonite clay as a function of \ce{[HCl]} is shown below.
-
-\begingroup
-\allowdisplaybreaks
 \begin{paracol}{2}
     \begin{align*}
-         & \text{With reference to Figure } \ref*{fig:lnLinearization}
+         & N = \SI{4}{N}~ \ce{H_2SO_4},\quad n = 2
         \\
-         & RSS = \sum_{n} (m\ce{[HCl]}_n + F_0 - F_n)^2
+         & M = \frac{N}{n}
         \\
-         & RSS = (\SI{-1.0428}{dm^3.mol^{-1}}\times0 + 1.945 - 2.1)^2 +
+         & = \frac{\SI{4}{N}~ \ce{H_2SO_4}}{2}
         \\
-         & (\SI{-1.0428}{dm^3.mol^{-1}}\times\SI{0.0100}{mol.dm^{-3}} + 1.945 - 2.1)^2
+         & = \SI{2}{mol.dm^{-3}}~ \ce{H_2SO_4}
         \\
-         & + \cdots +
-        \\
-         & (\SI{-1.0428}{dm^3.mol^{-1}}\times\SI{1.00}{mol.dm^{-3}} + 1.945 - 0.9)^2
-        \\
-         & = 0.16
-        \\
-         & \overline{F} = \frac{\sum F}{n}
-        \\
-         & \frac{2.1 + 2.1 + \cdots + 0.9}{6}
-        \\
-         & = 1.6
-        \\
-         & TSS = \sum_{n} (F_n - \overline{F})^2
-        \\
-         & = (2.1 - 1.6)^2 + (2.1 - 1.6)^2 + \cdots + (0.9 - 1.6)^2
-        \\
-         & 1.0
-        \\
-         & R^2 = 1 - \frac{RSS}{TSS}
-        \\
-         & = 1 - \frac{0.16}{1.0}
-        \\
-         & = 0.84
+         & \ce{[H_3O+]} = \SI{2}{mol.dm^{-3}}
     \end{align*}
     \switchcolumn
     \begin{align*}
-         & \text{With reference to Figure } \ref*{fig:reciprocalLinearization}
+         & N = \SI{4}{N}~ \ce{H_3PO_4},\quad n = 3
         \\
-         & RSS = \sum_{n} (m\ce{[HCl]}_n + F_0 - F_n)^2
+         & M = \frac{N}{n}
         \\
-         & RSS = (\SI{0.2482}{dm^3.mol^{-1}}\times0 + 0.1402 - 0.12)^2 +
+         & = \frac{\SI{4}{N}~ \ce{H_3PO_4}}{3}
         \\
-         & (\SI{0.2482}{dm^3.mol^{-1}}\times\SI{0.0100}{mol.dm^{-3}} + 0.1402 - 0.12)^2
+         & = \SI{1.3}{mol.dm^{-3}}~ \ce{H_3PO_4}
         \\
-         & + \cdots +
+         & \ce{[H_3O+]} = \sqrt{K_a \times \ce{[H_3PO_4]}}
         \\
-         & (\SI{0.2482}{dm^3.mol^{-1}}\times\SI{1.00}{mol.dm^{-3}} + 0.1402 - 0.4)^2
+         & = \sqrt{6.9 \times 10^{-3} \times \SI{1.3}{mol.dm^{-3}}}
         \\
-         & = 0.0040
-        \\
-         & \overline{F} = \frac{\sum F}{n}
-        \\
-         & \frac{0.12 + 0.12 + \cdots + 0.4}{6}
-        \\
-         & = 0.21
-        \\
-         & TSS = \sum_{n} (F_n - \overline{F})^2
-        \\
-         & = (0.12 - 0.21)^2 + (0.12 - 0.21)^2 + \cdots + (0.4 - 0.21)^2
-        \\
-         & 0.054
-        \\
-         & R^2 = 1 - \frac{RSS}{TSS}
-        \\
-         & = 1 - \frac{0.0040}{0.054}
-        \\
-         & = 0.92
+         & = \SI{0.1}{mol.dm^{-3}}
     \end{align*}
 \end{paracol}
-\endgroup
+
+
+\begin{paracol}{2}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.8\linewidth]{literature.png}
+        \caption{Literature data of Swelling percentage /\% as a function of Time /\unit{h} \protect\cite{ramavaraprasadSwellingCharacteristicsSoils2018a}}
+        \label{fig:literature}
+    \end{figure}
+    \switchcolumn
+    \begin{table}[H]
+        \centering
+        \caption{Literature values of final swelling percentage as a function of concentration of hydronium ions}
+        \begin{tblr}{
+            width = \linewidth,
+            colspec = {Q[683]Q[260]},
+            hlines,
+            vlines,
+            }
+            Concentration of~$\ce{H_3O+}$~/$\unit{mol.dm^{-3}}$ & Swelling Percentage /\% \\
+            2                                                   & 50                      \\
+            0.5                                                 & 60                      \\
+            0.1                                                 & 68                      \\
+            0.05                                                & 76                      \\
+            0                                                   & 116
+        \end{tblr}
+    \end{table}
+
+\end{paracol}
+
+Graphing the literature data produces the graph in Figure \ref*{fig:procLiterature},
+which further confirms the hypothesis that factor of swelling
+is inversely proportional to \ce{[H+]}.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{procLiterature.png}
+    \caption{Swelling percentage /\% as a function of concentration of \ce{[H+]} ions in solution from literature data \protect\cite{ramavaraprasadSwellingCharacteristicsSoils2018a}}
+    \label{fig:procLiterature}
+\end{figure}
+
+To thoroughly compare this experiment's results against the literature
+data, it is best to find a way to linearize both relationships.
+If a reciprocal relationship is the best-fit for the relationship,
+then a possibility for linearization is to reciprocate
+the factor of swelling or swelling percentage. While doing
+this with the experimental data yield a result that is possibly
+linear, doing this with the literature data yields a result
+that is not linear.
+
+\begin{paracol}{2}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=\linewidth]{reciprocalLinearization.png}
+        \caption{Reciprocal of factor of swelling as a function of solution pH from experimental data}
+        \label{fig:reciprocalLinearization}
+    \end{figure}
+    \switchcolumn
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=\linewidth]{reciprocalLiterature.png}
+        \caption{Reciprocal of swelling percentage as a function of solution pH from literature data \protect\cite{ramavaraprasadSwellingCharacteristicsSoils2018a}}
+        \label{fig:reciprocalLiterature}
+    \end{figure}
+\end{paracol}
+
+
+The method that produces the best linear results for both the experimental and literature data is by graphing
+the swelling factor or swelling percentage as a function of
+the pH of the acidic solution. Figure \ref*{fig:experimentalPH} shows this with the experimental
+data, and Figure \ref*{fig:literaturePH} shows this with the literature data.
+\textit{Note that this relationship is not entirely linear in neither of the
+    two graphs and the presence of the linear trendline is to identify these subtleties
+    in the evaluation}.
+
+\begin{paracol}{2}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=\linewidth]{experimentalPH.png}
+        \caption{Factor of swelling as a function of solution pH from experimental data}
+        \label{fig:experimentalPH}
+    \end{figure}
+    \switchcolumn
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=\linewidth]{literaturePH.png}
+        \caption{Swelling percentage /\% as a function of solution pH from literature data \protect\cite{ramavaraprasadSwellingCharacteristicsSoils2018a}}
+        \label{fig:literaturePH}
+    \end{figure}
+\end{paracol}
 
 \section{Conclusion}
 
@@ -818,33 +841,46 @@ and the concentration of \ce{H+} ions of an acidic solution \unit{mol.dm^{-3}}
 when the acidic solution and bentonite mix is inversely proportional, specifically
 of a reciprocal relationship (\(F \propto \frac{1}{\ce{[HCl]}}\)).
 
-The coefficient of determination for the reciprocal linearization
-(0.92) is a strong numerical support for the argument that
-there is a reciprocal relationship between the Factor
-of swelling and \ce{[HCl]}. However, one may look at
-Figure \ref*{fig:reciprocalLinearization}
-with skepticism regarding whether the trend is truly linear.
-While error bars give support to the argument that the
-trendline is linear, the way in which the data points from
-\(\ce{[HCl]} = \SI{0.050}{mol.dm^{-3}}, \SI{0.100}{mol.dm^{-3}}\)
-sit above the trendline and the data point from
-\(\ce{[HCl]} = \SI{0.50}{mol.dm^{-3}}\) sits below the trendline
-suggests the possibility of the relationship between
-\(\frac{1}{F}\) and \ce{[HCl]} to be cubic or inversely sigmoidal.
-This remaining uncertainty ultimately must be solved through
-more data distributed in between \(\ce{[HCl]} = 0\) to \(\ce{[HCl]} = 1\).
+With reference to Figures \ref*{fig:experimentalPH} and \ref*{fig:literaturePH},
+the experimental data matches the literature data in terms of
+the subtle trend in the data points, where in both graphs,
+data points around when pH is 0.3 is above the trendline
+and data points around when pH is 1 is below the trendline.
 
-% TODO: compare to literature values
+Upon closer comparison between the experimental data in \ref*{fig:reciprocalLinearization}
+and the literature data in \ref*{fig:reciprocalLiterature},
+one will notice that the two graphs do follow a similar trend
+until when \(\ce{[HCl]} = \SI{1.00}{mol.dm^{-3}}\) in the
+experimental data where the trend is broken. This indicates
+that the experimental data point for when \(\ce{[HCl]} = \SI{1.00}{mol.dm^{-3}}\)
+is not reliable, specifically that it is lower than reality.
 
 \subsection{Evaluation}
 
-% TODO: sources of error
-% 1: High ratio of solution to clay
+\begin{table}[H]
+    \centering
+    \begin{tblr}{
+        width = \linewidth,
+        colspec = {Q[110]Q[298]Q[292]Q[240]},
+        hlines,
+        vlines,
+        }
+        Source of Error                                                                                             & Effect on data                                                                                                                                                                                                                                                                                                                                 & Effect on result                       & How might this error be corrected in a future experiment                                                                   \\
+        High ratio of solution to clay                                                                              & {Uncertainty of the~$\SI{10}{mL}$~graduated cylinder is significant in comparison to the final volumes of the bentonite clay.                                                                                                                                                                                                                                                                                                                                                                                        \\Any volumes that were below the minimum graduation were not accurate.} & {Large final uncertainties in the factor of swelling\\Any concentrations of~$\ce{HCl}$ that lead to the final volume to be lower than the minimum graduated cylinder graduation are deemed unreliable. In this investigation, it was when~$\ce{[HCl]} = \SI{1.00}{mol.dm^{-3}}$~and caused the final factor of swelling for that concentration to be lower than reality.} & Determining a ratio that offers enough use of bentonite clay to make the graduated cylinder's uncertainty insignificant that does not lead to overflow of clay or solution during swelling nor lead to irregular distribution of absorption throughout the clay\\
+        Loss of bentonite clay during transfer to graduated cylinder due to stickiness to glassware and weigh boats & {Losing bentonite in the process of transferring it to the graduated cylinder would cause the amount of bentonite mixed within the solution to be less than $\SI{1.00}{mL}$. This in turn would cause the final volume of swollen bentonite to be lower than reality, potentially in multiples relative to the original loss of dry bentonite.                                                                                                                                                                       \\Because the amount of bentonite lost between each trial will vary, this source of error also contributes to variability in the final volume of submerged bentonite clay.} & {Lower factor of swelling than reality.\\Contributes to variability on the factor of swelling.} & Scratch as much of the remaining bentonite on each weigh boat and perform another round of transferring bentonite to each graduated cylinder. Take each graduated cylinder and tilt it to a degree such that any bentonite stuck on the upper portion of the graduated cylinder is removed.\\
+        Significant portion of bentonite being in the form of large granules                                        & The true volume of bentonite standardized to mass is lower than~$\SI{1.0}{mL}$. This would also mean that the volume of bentonite mixed with the solutions is lower than reality, causing the final volume of swollen bentonite to be lower than reality.                                                                                      & Lower factor of swelling than reality. & Incorporate into the process a section dedicated to pulverizing the bentonite. This can be done using a mortar and pestle.
+    \end{tblr}
+\end{table}
 
+Despite these sources of error, the methodology and process in this
+investigation allows for simple experimentation surrounding
+clay swelling. Overall, omitting the last experimental data point
+when \(\ce{[HCl]} = \SI{1.00}{mol.dm^{-3}}\), the trend of the
+data points fit very similarly to the literature data. This
+is despite that fact that this experiment was performed
+using common laboratory equipment instead of scarce
+equipment dedicated for these types of investigations.
 
-\subsection{Suggested improvements}
-
-% 1: Decrease ratio of solution to clay, implement in process a section where you determine whats a good ratio that doesn't completely absorb the solution
 
 \bibliographystyle{apacite}
 \bibliography{IB_CHEM_IA.bib}
